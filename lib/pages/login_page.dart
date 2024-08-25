@@ -28,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget> [
             _avatarWidget(),
+            _emailTextxField()
           ],
         ),
       )
