@@ -51,4 +51,24 @@ class _LoginPageState extends State<LoginPage> {
       
     );
   }
+
+  Widget _emailTextxField(){
+    return Container(
+      child: TextField(
+        cursorColor: Colors.white,
+        autocorrect: false,
+        style: TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          hintText: "lindex171@gmail.com",
+          hintStyle: TextStyle(color: Colors.white),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.white)
+          )
+        ),
+      ),
+    );
+  }
 }
