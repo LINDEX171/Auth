@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Color _primaryColor = Color.fromRGBO(100, 23, 45, 100);
+Color _primaryColor = Color.fromRGBO(10, 230, 45, 100);
 Color _secondaryColor = Color.fromRGBO(0, 0, 0, 0);
 
 class LoginPage extends StatefulWidget {
@@ -28,7 +28,8 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget> [
             _avatarWidget(),
-            _emailTextxField()
+            _emailTextxField(),
+            _passwordTextxField()
           ],
         ),
       )
@@ -71,5 +72,8 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+  Widget _passwordTextxField(){
+    return Container();
   }
 }
