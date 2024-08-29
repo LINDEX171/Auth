@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
           alignment: Alignment.center,
           child: Container(
             height: _deviceHeight * 0.60,
-            width: _deviceHeight * 0.055,
+            width: _deviceHeight * 0.55,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.max,
@@ -32,8 +32,8 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 _avatarWidget(),
                 SizedBox(height: _deviceHeight * 0.05,),
-                _emailTextxField(),
-                _passwordTextxField(),
+                _emailTextField(),
+                _passwordTextField(),
                 SizedBox(height: _deviceHeight * 0.10,),
                 _loginButton()
               ],
@@ -55,9 +55,9 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _emailTextxField() {
+  Widget _emailTextField() {
     return Container(
-      width: _deviceWidth * 70,
+      width: _deviceWidth * 0.70,
       child: TextField(
         cursorColor: Colors.white,
         autocorrect: false,
@@ -74,9 +74,9 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _passwordTextxField() {
+  Widget _passwordTextField() {
     return Container(
-      width: _deviceWidth * 70,
+      width: _deviceWidth * 0.70,
       child: TextField(
         obscureText: true,
         cursorColor: Colors.white,
@@ -88,8 +88,10 @@ class _LoginPageState extends State<LoginPage> {
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
             ),
+
             focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.white))),
+                borderSide: BorderSide(color: Colors.white))
+        ),
       ),
     );
   }
