@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 Color _primaryColor = Color.fromRGBO(125, 191, 211, 1.0);
 Color _secondaryColor = Color.fromRGBO(169, 224, 241, 1.0);
 
@@ -31,11 +33,15 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 _avatarWidget(),
-                SizedBox(height: _deviceHeight * 0.05,),
+                SizedBox(
+                  height: _deviceHeight * 0.05,
+                ),
                 _emailTextField(),
                 _passwordTextField(),
-                SizedBox(height: _deviceHeight * 0.10,),
-                _loginButton()
+                SizedBox(
+                  height: _deviceHeight * 0.10,
+                ),
+                _loginButton(context)
               ],
             ),
           ),
@@ -88,15 +94,13 @@ class _LoginPageState extends State<LoginPage> {
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
             ),
-
             focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.white))
-        ),
+                borderSide: BorderSide(color: Colors.white))),
       ),
     );
   }
 
-  Widget _loginButton() {
+  Widget _loginButton(BuildContext _context) {
     return MaterialButton(
         minWidth: _deviceWidth * 0.38,
         height: _deviceWidth * 0.12,
@@ -108,6 +112,11 @@ class _LoginPageState extends State<LoginPage> {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25.0),
             side: BorderSide(color: Colors.white)),
-        onPressed: () {});
+        onPressed: () {
+          Navigator.pushReplacement(_context,
+              MaterialPageRoute(builder: (BuildContext _context) {
+            return HomePage();
+          }));
+        });
   }
 }
